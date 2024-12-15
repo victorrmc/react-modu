@@ -4,6 +4,7 @@ export function Filters({changeFilters}) {
   const [price, setPrice] = useState(0)
   const [category, setCategory] = useState('all')
 
+  // Cambiar el valor del precio
   const handleChangePrice = (event) => {
     const newPrice = event.target.value
     setPrice(newPrice)
@@ -11,6 +12,7 @@ export function Filters({changeFilters}) {
         ...prevState, priceMin: newPrice
     }))
   }
+  // Cambiar el valor de la categoria
   const handleChangeCategory = (event) => {
     const newCategory = event.target.value
     setCategory(newCategory)
@@ -32,4 +34,5 @@ export function Filters({changeFilters}) {
       </select>
     </div>
   );
+
 }
